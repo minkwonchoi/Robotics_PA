@@ -6,3 +6,12 @@
 
 #for each of your states.
 
+
+
+Find_Wall = 0 
+
+Found_Wall = 1 
+
+Following = 2
+
+FOLLOW_DISTANT = 0.5
