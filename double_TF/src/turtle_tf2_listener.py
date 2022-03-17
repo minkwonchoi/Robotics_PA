@@ -36,7 +36,7 @@ if __name__ == '__main__':
         try:
 # This is the most important line. Requests the transform between turtle1 and turtle_name
             trans = tfBuffer.lookup_transform(turtle_name, 'turtle1', rospy.Time())
-            trans3 = tfBuffer.lookup_transform(turtle_name3, 'turtle2', rospy.Time())
+            trans3 = tfBuffer.lookup_transform(turtle_name3, 'turtle2\', rospy.Time())
         except (tf2_ros.LookupException, tf2_ros.ConnectivityException,tf2_ros.ExtrapolationException):
             rate.sleep()
             continue
