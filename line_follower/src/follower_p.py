@@ -49,7 +49,6 @@ class Follower:
             # add a turn if the centroid is not in the center
             # Hope for the best. Lots of failure modes.
             err = cx - w/2
-            print(err)
             self.twist.linear.x = 0.2
             cap = 500
             if err>cap:
@@ -60,8 +59,8 @@ class Follower:
             print(-float(err) / 300)
             self.cmd_vel_pub.publish(self.twist)
         else:
-            self.twist.linear.x = 0.2
-            # self.twist.angular.z = 0.3
+            self.twist.linear.x = 0.2.      #Change to linear for line detection at the beginning
+            # self.twist.angular.z = 0.3.   #Change to angular velocity for endless line following
             self.cmd_vel_pub.publish(self.twist)
         #cv2.imshow("image", image)
         #cv2.waitKey(3)
